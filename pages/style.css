@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* border: solid 1px #efefef; */
+}
+
+body {
+  overflow: hidden;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: block;
+  background-color: #0e4166;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(14, 65, 102, 0.86),
+    #0e4166
+  );
+}
+
+.container {
+  position: absolute;
+  width: 90%;
+  max-width: 1200px;
+  height: 80%;
+  max-height: 800px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../profile.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.name {
+  position: absolute;
+  font-family: "Montserrat";
+  top: 24%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #efefef;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.role {
+  position: absolute;
+  font-family: "Montserrat";
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #efefef;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.button {
+  padding: 0.8rem 8rem;
+  margin: 10px;
+  background-color: #3c919b;
+  color: #efefef;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-decoration: none;
+  max-width: 200px;
+  width: 80%;
+  text-align: center;
+  transition: 0.1s;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 0px rgb(57, 130, 112);
+}
+.button:hover:active {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0px;
+}
+
+@media (max-width: 767px) {
+  .image {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+  }
+  .name {
+    font-size: 16px;
+    top: 20%;
+  }
+  .role {
+    font-size: 14px;
+    top: 25%;
+  }
+  .button {
+    font-size: 14px;
+    padding: 0.7rem 3rem;
+    /* width: auto; */
+  }
+}
+@media (max-width: 320px) {
+  .image {
+    width: 50px;
+    height: 50px;
+    top: 9%;
+  }
+  .name {
+    font-size: 14px;
+    top: 18%;
+  }
+  .role {
+    font-size: 10px;
+    top: 23%;
+  }
+  .button {
+    font-size: 10px;
+    padding: 0.6rem 2rem;
+    /* width: auto; */
+  }
+}
